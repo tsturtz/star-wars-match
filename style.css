@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Starjedi';
+    src: url('Starjedi.ttf')
+}
+
+body {
+    background: url(images/tatooine.jpg) no-repeat center top;
+    background-size: cover;
+    color: black;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #710800;
+    font-weight: bolder;
+}
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    display: table;
+}
+
+header h1 {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'Starjedi',sans-serif;
+    margin: 0;
+    color: white;
+    font-size: 5vh;
+}
+
+#middle_container {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#stats_container {
+    width: 10%;
+    height: 100%;
+    display: table;
+}
+
+.stats_inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#game-area {
+    width: 90%;
+    height: 100%;
+    display: table;
+}
+
+.game_inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.card {
+    height: 90%;
+    width: 12%;
+    background-color: white;
+    display: inline-block;
+    margin: 20px 1%;
+}
+
+.back, .front {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.back img, .front img {
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 26vh;
+    margin: 0;
+}
+
+.about-wrapper {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    margin: 50px auto 0;
+}
+
+.profile-image {
+    background: url(images/me-hike-grandcanyon-circle.png) no-repeat center center;
+    background-size: 30%;
+    height: 30%;
+    margin: 30px auto 20px;
+}
+
+li {
+    list-style: none;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+ul {
+    font-size: 2.2vh;
+    padding: 0;
+}
+
+p {
+    clear: both;
+    font-size: 2vh;
+}
+
+.about-wrapper > h2, .about-wrapper > h3, .about-wrapper > p, .about-wrapper > ul {
+    text-align: center;
+}
+
+h3 {
+    font-size: 2.5vh;
+}
