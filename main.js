@@ -1,6 +1,6 @@
 var first_card_clicked = null;
 var second_card_clicked = null;
-var total_possible_matches = 2;
+var total_possible_matches = 9;
 var match_counter = 0;
 
 function card_clicked() {
@@ -22,16 +22,18 @@ function card_clicked() {
                 $('.game_inner').append(h1);
             }
         } else {
-            setTimeout(flip_back, 2000)
+            $('.back').unbind();
+            setTimeout(flip_back, 2000);
         }
     }
 }
 
 function flip_back() {
-    //$('.back').show();
-    $(first_card_clicked, second_card_clicked).parent().parent().find('.back').show();
+    $(first_card_clicked).show();
+    $(second_card_clicked).show();
     first_card_clicked = null;
     second_card_clicked = null;
+    $('.back').click(card_clicked);
 }
 
 $(document).ready(function () {
