@@ -27,6 +27,29 @@ while (all_images.length){
     console.log('New image : ' + all_images[i]);
 }
 
+//Assign divs/imgs to vars
+var card_container = $('<div>').addClass('card col-md-2');
+var front_card = $('<div>').addClass('front');
+//TODO: add front_card_img
+var back_card = $('<div>').addClass('back');
+var back_card_img = $('<img>').attr('src','http://i.imgur.com/Ox2dFcH.jpg');
+
+
+//TODO: append card_container to rows and deal with the front ones
+function append_cards(){
+    //$('.card').append(front_card);
+    //$('.front').append(front_card_img);
+    append_all_backs();
+}
+
+function append_all_backs(){
+    for(i=0; i<=6; i++){
+        $('.row').append(card_container);
+        /*$('.card').append(back_card);
+        $('.back').append(back_card_img);*/
+    }
+}
+
 function display_stats() {
     accuracy_percentage = accuracy + '%';
     $('.games-played .value').text(games_played);
@@ -96,6 +119,7 @@ function reset_button() {
 
 $(document).ready(function () {
     $('.back').click(card_clicked);
-    reset_stats();
     $('.reset').click(reset_button);
+    reset_stats();
+    append_cards();
 });
