@@ -91,7 +91,6 @@ header h1 {
     width: 100%;
     height: 100%;
     margin: 0;
-    transition: 2s;
 }
 
 .game_inner .win-screen h1 {
@@ -147,7 +146,7 @@ a {
     padding: 10px;
     margin: 5px;
     border: 2px solid #fff;
-    background-color: rgba(113, 8, 0, 0.7);
+    background-color: rgba(113, 8, 0, 0.9);
     color: #fff;
     border-radius: 15px;
     font-weight: bold;
