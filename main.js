@@ -21,15 +21,15 @@ var games_played = 0; //Total games played during a user session.
 
 //Front of card images in an array.
 var images_array = [
-    'https://images-na.ssl-images-amazon.com/images/I/411X3hGkeaL._SY300_.jpg', //r2d2
-    'https://s-media-cache-ak0.pinimg.com/564x/8a/db/3f/8adb3fb7f97b05371256bba58ebbde14.jpg', //obiwan
-    'https://static1.squarespace.com/static/55bdd8e1e4b003dc5b7da717/5628c641e4b0629aedbd315b/5628c646e4b02a1b09bf0d2f/1445512774751/C-3PO-See-Threepio_68fe125c.jpeg?format=300w', //c3po
-    'https://s-media-cache-ak0.pinimg.com/564x/f5/a6/d5/f5a6d59d715b1e416d41d5a17040e553.jpg', //gonk droid
-    'http://i.imgur.com/QhLHu0z.jpg', //imperial probe droid
-    'http://www.absolutehobbyz.com/thumbnail.asp?file=assets/images/obxr001usa.jpg&maxx=300&maxy=0', //bb8
-    'http://orig08.deviantart.net/8440/f/2012/080/b/c/profile_picture_by_cw_b1_droid-d4tijnk.jpg', //prequel droid
-    'http://3dsmolier.com/media/cache/a6/69/a669febde530392f3767698682fe7a8d.jpg', //mouse droid
-    'https://duckduckgo.com/i/35ae1b25.jpg' //r4
+    'images/r2d2.jpg', //r2d2
+    'images/obiwan.jpg', //obiwan
+    'images/c3po.jpg', //c3po
+    'images/gonk.jpg', //gonk droid
+    'images/imperial-probe.jpg', //imperial probe droid
+    'images/bb8.jpg', //bb8
+    'images/battle-droid.jpg', //prequel droid
+    'images/mouse-droid.jpg', //mouse droid
+    'images/r4-p17.jpg' //r4
 ];
 
 //Append all card containers - TODO: Make this more efficient if possible
@@ -135,6 +135,7 @@ function flip_back() {
 function reset_button() {
     games_played++;
     reset_stats();
+    display_stats();
     $('.win-screen').remove(); //Hides the win screen if it's active
     $('.back').show(); //Flips all cards to starting position
 }
