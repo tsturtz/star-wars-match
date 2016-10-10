@@ -34,7 +34,13 @@ var images_array = [
 
 //Append all card containers - TODO: Make this more efficient if possible
 function append_all_cards() {
-    for (i = 0; i < 6; i++) {
+    for(i=0; i<6; i++){
+        for(j=1; j<=3; j++){
+            var card_container = $('<div>').addClass('card col-md-2');
+            $('.row_'+j).append(card_container);
+        }
+    }
+/*    for (i = 0; i < 6; i++) {
         var card_container = $('<div>').addClass('card col-md-2');
         $('.row_1').append(card_container);
     }
@@ -45,7 +51,7 @@ function append_all_cards() {
     for (i = 0; i < 6; i++) {
         var card_container = $('<div>').addClass('card col-md-2');
         $('.row_3').append(card_container);
-    }
+    }*/
 }
 
 //Append all back divs to card containers
@@ -105,11 +111,11 @@ function card_clicked() {
             if (match_counter == total_possible_matches) {
                 var win_screen = $('<div>').addClass('win-screen');
                 var win_h1 = $('<h1>').text('You win!');
-                var win_reset = $('<a>').addClass('reset').text('Play Again!');
+                var win_reset = $('<a>').addClass('play_again').text('Play Again!');
                 $('.game_inner').append(win_screen);
                 $('.win-screen').append(win_h1);
                 $('.win-screen').append(win_reset);
-                $('.reset').click(reset_button);
+                $('.play_again').click(reset_button);
             }
         } else {
             $('.back').unbind(); //Disables the click event handler for the duration of flip_back

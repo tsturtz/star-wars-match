@@ -103,7 +103,7 @@ header h1 {
     font-size: 60px;
 }
 
-.game_inner .win-screen .reset {
+.game_inner .win-screen .play_again {
     position: absolute;
     top: 55%;
     left: 50%;
@@ -199,4 +199,8 @@ a:hover {
 .about-wrapper h3 {
     font-size: 2.5vh;
     margin: 30px 0;
+}
+
+.about-wrapper a {
+    font-size: 2vh;
 }
